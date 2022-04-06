@@ -1,0 +1,15 @@
+note over Browser
+    Write a string to the text input
+    Press save
+end note
+note over Browser
+    browser starts executing js-code
+    spa.js prevent request a HTTP 302 status
+    it create a note object with the text input
+    it push the created note to an array
+    it write an empty string in the text input
+    it rewrite the notes to display
+end note 
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over Server: Add string to database
+Server-->Browser: HTTP 201 created
